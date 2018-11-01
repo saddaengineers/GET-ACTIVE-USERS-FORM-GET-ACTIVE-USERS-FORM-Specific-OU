@@ -1,0 +1,1 @@
+﻿Get-ADUser -Filter * -SearchBase "OU=FT,OU=AllUsers,DC=jabong,DC=itl" -Properties sAMAccountName | Where-Object {$_.Enabled -eq $true} | Select-Object SAMAccountName | Export-Csv -Path C:\ftactiveusers.csv -NoTypeInformation
